@@ -39,8 +39,7 @@ CREATE TABLE `detalhes_produto` (
 --
 -- Despejando dados para a tabela `detalhes_produto`
 --
-
-INSERT INTO `detalhes_produto` (`id`, `peso`, `dimensoes`, `codigo_barras`, `data_validade`, `produto_id`) VALUES
+ soes`, `codigo_barras`, `data_validade`, `produto_id`) VALUES
 (1, 0.30, '15x8x2', '7891234567890', NULL, 1),
 (2, 0.20, '30x20x5', '7899876543210', NULL, 2),
 (3, 1.00, '20x10x5', '7894561237895', '2025-06-04', 3),
