@@ -20,14 +20,16 @@ try {
 /*DSN DATA SOURCE NAME, é a string de conexão, onde se passa o tipo do banco de dados, o host e o nome do banco de dados 
 o host e o nome do banco de dados*/
 
-    $conexao = new PDO("mysql:host=$servidor;
-    dbname=$banco",
-     $usuario,
-     $senha);
+    $conexao = new PDO("mysql:host=$servidor; dbname=$banco", $usuario, $senha);
+
+    $conexao ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //ho "Conexão com banco de dados estabelecida com sucesso!";
 
     } catch (\Throwable $erro){
-        //lançavel  seve paras qualque tipo de erro  ou coneceção
+        //lançavel  serve paras qualque tipo de erro  ou conceção
         //captura de erro caso a conexão falhe
+
+        die("Erro de conexão: " . $erro->getMessage());
         
 
      }
